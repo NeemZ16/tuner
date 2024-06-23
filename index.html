@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Tuner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="listening.js" defer></script>
+    <script src="tunings.js" defer></script>
+    <script src="canvas.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Guitar Tuner</h1>
+    </header>
+    <div class="indicator">
+        <div class="canvas-container">
+            <canvas id="indicator" alt="tuning indicator"></canvas>
+        </div>
+        <i><span id="target-note"></span></i>
+        <button id="start-btn" title="start tuning!">Start Tuning!</button>
+        <button id="stop-btn" title="mic off" class="hidden">stop</button>
+    </div>
+    <hr>
+    <div class="str-btns">
+        <div class="str-container"><button id="str6" title="tune string 6">E2</button><span class="str-num">#6</span>
+        </div>
+        <div class="str-container"><button id="str5" title="tune string 5">A2</button><span class="str-num">#5</span>
+        </div>
+        <div class="str-container"><button id="str4" title="tune string 4">D3</button><span class="str-num">#4</span>
+        </div>
+        <div class="str-container"><button id="str3" title="tune string 3">G3</button><span class="str-num">#3</span>
+        </div>
+        <div class="str-container"><button id="str2" title="tune string 2">B3</button><span class="str-num">#2</span>
+        </div>
+        <div class="str-container"><button id="str1" title="tune string 1">E4</button><span class="str-num">#1</span>
+        </div>
+    </div>
+    <hr>
+    <div class="tunings"></div>
+    <div class="custom-table hidden">
+        <h2>Create Custom Tuning</h2>
+        <div class="custom-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#6</th>
+                        <th>#5</th>
+                        <th>#4</th>
+                        <th>#3</th>
+                        <th>#2</th>
+                        <th>#1</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="table-options">
+                <h3>Options</h3>
+                <div class="transpose">
+                    <h4>Transpose</h4>
+                    <button id="t-down" title="transpose down">-1</button>
+                    <button id="t-up" title="transpose up">+1</button>
+                </div>
+                <button id="reset-custom" title="reset to default">Reset</button>
+                <div class="save">
+                    <h4>Save Tuning</h4>
+                    <label for="tuning-name">
+                        <span>Enter a name to save tuning:</span>
+                        <input type="text" id="tuning-name" placeholder="tuning name" autocomplete="off">
+                    </label>
+                    <button id="save-custom" title="save custom tuning" disabled>Save</button>
+                    <span class="conf" id="save-msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- TODO: add footer content -->
+    </footer>
+</body>
+
+</html>
