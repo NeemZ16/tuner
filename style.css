@@ -143,7 +143,7 @@ h1 {
     background-color: #F4C41A;
 }
 
-/* TODO: style delete buttons */
+/* tuning - delete buttons */
 .delete-btn {
     display: none;
 
@@ -373,7 +373,6 @@ td button.active:active {
 }
 
 @media screen and (max-width: 600px) {
-    /* TODO: make custom table responsive */
     .custom-container {
         flex-direction: column;
     }
